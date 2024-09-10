@@ -10,4 +10,38 @@ n <- 4
 S0 <- rwish(diag(n))
 
 # mean for the additive effects
-M0 <- rep(0, n)
+m0 <- rep(0, each = n)
+
+rmvnorm(n, m0, S0)
+
+get_A_i <- function(n, mu, Sigma) {
+  #pass
+}
+
+
+
+# Set the parameters
+mu <- c(0, 0)  # Mean vector
+sigma <- matrix(c(1, 0.5, 0.5, 1), nrow = 2)  # Covariance matrix
+
+# Generate samples
+n_samples <- 1000
+samples <- mvrnorm_2d(n_samples, mu, sigma)
+
+# Plot the results
+plot(samples, main = "Samples from 2D Multivariate Normal Distribution",
+     xlab = "X1", ylab = "X2", pch = 20, col = "blue")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
