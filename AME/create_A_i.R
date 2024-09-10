@@ -2,7 +2,7 @@
 # We will generate 4 samples
 
 #source("rwish.R")
-#source("mvrnorm.R")
+source("mvrnorm.R")
 
 # fixing number of samples to 4
 #n <- 4
