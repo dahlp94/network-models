@@ -19,7 +19,7 @@ source("mvrnorm.R")
 #mvrnorm(n, m0, S0)
 
 get_Additives <- function(n, m0, S0) {
-  A <- mvrnorm(n, m0, S0)
+  A <- mvrnorm_cholesky(n, m0, S0)
   
   return(list(a = A[,1],
               b = A[,2]))
