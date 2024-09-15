@@ -28,10 +28,20 @@ get_L_shape_elements <- function(matrix, k) {
   ))
 }
 
-
 # matrix
 M <- matrix(1:16, nrow=4)
+n <- 4
+k <- 4
 
-get_L_shape_elements(M,3)
+# elements to the right (assume 1<=k<n)
+M[k, (k+1):n]
 
+# elements to the left (assume n>=k>1)
+M[k, 1:(k-1)]
 
+# elements to the down (assume 1<=k<n)
+M[(k+1):n, k]
+
+# elements to the up (assume n>=k>1)
+M[1:(k-1), k]
+## ------------------------------------------------------------------
